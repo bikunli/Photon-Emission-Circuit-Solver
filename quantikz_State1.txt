@@ -1,0 +1,18 @@
+\begin{tikzpicture} 
+	\node[scale = 0.5]{	
+		\begin{quantikz} 
+			 & \lstick{$p_{1}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \targ{} & \qw &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\   
+			 & \lstick{$p_{2}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \targ{} & \qw &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\   
+			 & \lstick{$p_{3}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \gate{H} & \qw &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\   
+			 & \lstick{$p_{4}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \gate{H} & \gate{X} & \qw &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\   
+			 & \lstick{$p_{5}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \qw &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\   
+			 & \lstick{$p_{6}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \gate{H} & \qw &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\   
+			 & \lstick{$p_{7}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \gate{H} & \gate{X} & \qw &  &  &  &  &  &  &  &  &  &  &  \\   
+			 & \lstick{$p_{8}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \qw &  &  &  &  &  &  &  \\   
+			 & \lstick{$p_{9}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \gate{H} & \qw &  &  &  &  &  \\   
+			 & \lstick{$p_{10}$} & \gate[style={fill=red!20}]{\ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \gate{H} & \gate{X} & \qw &  &  \\   
+			 & \lstick{$e_{1}$} & \gate[style={fill=green!20}]{\ket{0}} & \gate{H} & \ctrl{1} & \qw & \ctrl{-10} & \gate{H} & \ctrl{-9} & \ctrl{-8} & \qw & \ctrl{-7} & \gate{H} & \meter{} \vcw{-7} & \gate[style={fill=green!20}]{\ket{0}} & \gate{H} & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \ctrl{-3} & \ctrl{-2} & \qw & \ctrl{-1} & \gate{H} & \meter{} \vcw{-1} & \gate[style={fill=green!20}]{\ket{0}} & \qw &  \\   
+			 & \lstick{$e_{2}$} & \gate[style={fill=green!20}]{\ket{0}} & \qw & \targ{} & \gate{H} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ{} & \ctrl{-7} & \ctrl{-6} & \qw & \ctrl{-5} & \gate{H} & \meter{} \vcw{-5} & \gate[style={fill=green!20}]{\ket{0}} & \qw &  &  &  &  &  &  &  &  &  &  \\   
+		\end{quantikz} 
+	}; 
+\end{tikzpicture}

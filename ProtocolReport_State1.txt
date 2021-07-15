@@ -1,0 +1,59 @@
+************************************************
+This report shows the solution of protocol.
+14-Jul-2021 19:56:04
+************************************************
+
+(The following protocol is executed in time order :) 
+1 <= j <= n_p labels photons. (n_p = 10) 
+1 <= i <= n_e labels emitters. (n_e = 2) 
+In this protocol solution, there are: 
+	3 local measurements on emitters.
+	2 CNOT gates on emitters.
+	8 single qubit gates on emitters. (Caution: redundant repetive gates include (~ total measurement number).) 
+
+========================================================
+Perform following operations in time order: 
+Prepare all emitters in |0> state, perform following operations on state vector: 
+
+	H on emitter i = 1. 
+	CNOT on emitters (i_c,i_t) = (1,2). 
+	H on emitter i = 2. 
+--------------
+* Emit the photon j = 1, with emitter i = 1 . 
+	H on emitter i = 1. 
+--------------
+* Emit the photon j = 2, with emitter i = 1 . 
+--------------
+* Emit the photon j = 3, with emitter i = 1 . 
+	H on photon j = 3 
+--------------
+* Emit the photon j = 4, with emitter i = 1 . 
+	H on photon j = 4 
+	H on emitter i = 1. 
+	@ Measure the emitter i = 1 on z-axis, with outcome s_j = 0 or 1. 
+		 (if s_j = 1, then X on photon j = 4 and emitter i = 1) 
+	H on emitter i = 1. 
+	CNOT on emitters (i_c,i_t) = (1,2). 
+--------------
+* Emit the photon j = 5, with emitter i = 2 . 
+--------------
+* Emit the photon j = 6, with emitter i = 2 . 
+	H on photon j = 6 
+--------------
+* Emit the photon j = 7, with emitter i = 2 . 
+	H on photon j = 7 
+	H on emitter i = 2. 
+	@ Measure the emitter i = 2 on z-axis, with outcome s_j = 0 or 1. 
+		 (if s_j = 1, then X on photon j = 7 and emitter i = 2) 
+--------------
+* Emit the photon j = 8, with emitter i = 1 . 
+--------------
+* Emit the photon j = 9, with emitter i = 1 . 
+	H on photon j = 9 
+--------------
+* Emit the photon j = 10, with emitter i = 1 . 
+	H on photon j = 10 
+	H on emitter i = 1. 
+	@ Measure the emitter i = 1 on z-axis, with outcome s_j = 0 or 1. 
+		 (if s_j = 1, then X on photon j = 10 and emitter i = 1) 
+========================================================
