@@ -1,1 +1,1 @@
-# Photon-Emission-Circuit-Solver
+# Photons-Emission-Circuit-Solver
