@@ -238,7 +238,7 @@ end
 fileID = fopen(['quantikz_',filename,'.txt'],'w');
 fprintf(fileID, '\\begin{tikzpicture} \n');
 fprintf(fileID, '\t\\node[scale = 0.5]{	\n');
-fprintf(fileID, '\t\t\\begin{quantikz} \n');
+fprintf(fileID, '\t\t\\begin{quantikz} [row sep={0.7cm,between origins},column sep=0.12cm]\n');
 for i_r = 1:size(CC,1)
     fprintf(fileID, '\t\t\t');
     for i_c = 1:size(CC,2)
