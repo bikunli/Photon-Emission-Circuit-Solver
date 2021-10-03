@@ -1,5 +1,5 @@
 function [Equivalence] = GeneratorsEquivalence(G1,G2)
-% Check if generators set  G1 & G2 are gauge equivalent (up to a row transformation)
+% Check whether generator sets G1 and G2 are gauge equivalent (up to a row transformation).
 % Both tableaus and signvectors are compared. 
 
 Equivalence.Overall = false;
