@@ -3,28 +3,28 @@ function [Generators] = GaugeTransformation(Generators,R)
 % Generators is a structure variable, which is updated in the output:
 % Generator.Tableau is the tableau representation of generators
 % Generator.SignVector is a binary vector records the sign: (-1)^SignVector
-% R is a binary n x n matrix that complete the row transformation
+% R is a binary n x n matrix that completes the row transformation
 % Version: v1.0, Date: 01/17/2021
 
 
 SignVector_temp = mod( R*Generators.SignVector,2 );
 n = size(Generators.Tableau,1);
 for k = 1:n
-    g_mat = Generators.Tableau(logical(R(k,:)),:);
+    % collect the rows to be operated, which is found in the k-th row of R.
+    g_mat = Generators.Tableau(logical(R(k,:)),:); 
     ExtraSign = 0; % phase factor: (-1)^ExtraSign
-    m = size(g_mat,1);
-    % The follow steps mutiplies the i-th row with the reference row,
-    % It will find if a minus sign should be obtained.
+    m = size(g_mat,1); 
+    % The follow steps mutiply the i-th row with the reference row,
     rr = g_mat(1,:); % Reference row: the first row
     for i = 2:m
         r4ins = g_mat(i,:); % row for inspection: will be multipied with the rr row.
         for j = 1:n
-            % update the phase factor: (-1)^ph
+            % update the phase factor: (-1)^ph (the so called row-sum in PRA 70, 052328 (2004))
             ExtraSign = ExtraSign + ((rr(j)==1)*(rr(j+n)==1)*(r4ins(j+n) - r4ins(j)) ...
                 + (rr(j)==1)*(rr(j+n)==0)*(r4ins(j+n)*(2*r4ins(j)-1)) ...
                 + (rr(j)==0)*(rr(j+n)==1)*(r4ins(j)*(1-2*r4ins(j+n))))/2;
         end
-        rr = mod(rr + r4ins,2);
+        rr = mod(rr + r4ins,2); % row multiplication in tableau
     end
     if ExtraSign ~= round(ExtraSign) % ph must be an interger !
         warning('ExtraSign is not an interger!');    % which shouldn't happen if g_mat is legal
