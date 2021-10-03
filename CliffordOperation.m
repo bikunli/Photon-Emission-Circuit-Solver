@@ -4,11 +4,11 @@ function [Generators] = CliffordOperation(Generators,gate_str,site)
 % Generator.Tableau is the tableau representation
 % Generator.SignVector is a binary vector records the sign: (-1)^SignVector
 % gate_str can be 'I','H','P','PH','HP','HPH','X','Y','Z','CNOT'.......
-% * but 'SWAP' is not included
+% ** but 'SWAP' is not included (too trivial)
 % (more gate_str see the dictionary: OtherLC)
 % Other operation should be realized repeatedly using this function
-% site is a scalar for single qubit gate
-% site is a vector [i,j] for control gate CNOT_{i,j}
+% site is a scalar, if the operation acts on single qubit gate
+% site is a vector [i,j], if the operation is a control gate CNOT_{i,j}
 % This function needs to call function: Qmatrix() (included at the end)
 % Version v1.0,  Date: 01/17/2021
 
@@ -48,6 +48,9 @@ end
 
 function [Q]=Qmatrix(N,type,i,j)
 % Q matrix is a matrix that right-multiply on the tableau matrix
+% N is the qubit number
+% type is the operation type
+% i,j are sites to be acted on.
 if strcmp(type,'CZ') == 1 || strcmp(type,'CNOT') == 1 || strcmp(type,'CX') == 1
     if nargin < 4
         error('Insufficient input arguments!');
